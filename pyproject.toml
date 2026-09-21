@@ -39,6 +39,18 @@ dev = [
 [project.scripts]
 mcp-security-mitmproxy = "mcp_security_mitmproxy.__main__:main"
 
+# Security overrides: mitmproxy 12.2.3 pins transitive upper bounds that block
+# patched releases of tornado/h2/cryptography/msgpack (Dependabot alerts 1-10).
+# mitmproxy's own `main` already relaxed these exact bounds to pick up the
+# fixes; we mirror the versions it tests there until a release ships them.
+[tool.uv]
+override-dependencies = [
+    "tornado>=6.5.8,<=6.5.8",
+    "h2>=4.4.1,<=4.4.1",
+    "cryptography>=50.0.0,<=50.0.0",
+    "msgpack>=1.2.1",
+]
+
 [tool.hatch.build.targets.wheel]
 packages = ["src/mcp_security_mitmproxy"]
 
