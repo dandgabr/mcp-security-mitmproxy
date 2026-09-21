@@ -221,6 +221,16 @@ uv build
 
 ## 📚 Technical Documentation
 
+### User Guide (`docs/user-guide/`)
+
+* [Getting Started](docs/user-guide/01-getting-started.md) — install, launch, first capture session.
+* [Tools Reference](docs/user-guide/02-tools-reference.md) — all 18 MCP tools: inputs, outputs, errors, examples.
+* [Configuration](docs/user-guide/03-configuration.md) — environment variables, settings, filesystem allowlists.
+* [Security Model](docs/user-guide/04-security-model.md) — R1–R5 enforcement, reserved options, error handling.
+* [Secrets Handling](docs/user-guide/05-secrets-handling.md) — redaction engine, token lifecycle, on-disk artifacts.
+
+### Architecture and ADRs
+
 * [ADR-001: Technology Stack and Subprocess Execution Architecture](docs/adr/0001-stack-tecnologico-e-arquitetura-de-execucao.md)
 * [ADR-002: Secret Redaction Strategy and In-Process Flow Management](docs/adr/0002-redacao-de-segredos-e-gestao-de-fluxos-offline.md)
 * [ADR-003: Codeless Traffic Manipulation, Dynamic Rules, and LFI Prevention](docs/adr/0003-manipulacao-trafego-regras-addons.md)
