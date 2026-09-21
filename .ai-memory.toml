@@ -1,0 +1,3 @@
+workspace = "mcp-security"
+project = "mcp-security-mitmproxy"
+project_strategy = "repo-root"
